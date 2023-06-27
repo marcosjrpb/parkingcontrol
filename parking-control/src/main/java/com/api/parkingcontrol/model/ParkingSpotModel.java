@@ -10,13 +10,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name="TB_PARKING_SPOT")
 public class ParkingSpotModel implements Serializable{
@@ -25,35 +21,23 @@ public class ParkingSpotModel implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private UUID id;
-	
+	private UUID id;	
 	@Column(nullable = false, unique = true, length = 10)
-	private String parkingSpotNumber;
-	
+	private String parkingSpotNumber;	
 	@Column(nullable = false, unique = true, length = 7)
-	private  String licensePlateCar;
-	
+	private  String licensePlateCar;	
 	@Column(nullable = false, unique = true, length = 70)
-	private String brandCar;
-	
+	private String brandCar;	
 	@Column(nullable = false, unique = true, length = 70)
-	private String modelCar;
-	
+	private String modelCar;	
 	@Column(nullable = false, unique = true, length = 70)
-	private String colorCar;
-	
+	private String colorCar;	
 	@Column(nullable = false)
-	private  LocalDateTime registrationDate;
-
-	@Column(nullable = false)
-	private  LocalDateTime departureDate;
-	
+	private  LocalDateTime registrationDate;	
 	@Column(nullable = false, length = 130)
-	private String responsibleName;
-	
+	private String responsibleName;	
 	@Column(nullable = false, length = 30)
-	private String apartament;
-	
+	private String apartment;	
 	@Column(nullable = false, length = 30)
 	private String block;
 		
